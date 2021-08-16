@@ -1,0 +1,250 @@
+
+
+body{
+	padding:0;
+	margin:0;
+	background:#ccc;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+  
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Open Sans', sans-serif;
+}	
+p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color:black;
+  line-height: 1.9em;
+  }
+/*----topMenu start---*/
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+}
+
+.topMenu {
+    background: #C2A7C2;
+    color:#000;	
+   }
+   
+      .topMenuText {
+    color:#000;
+    font-size: 14px;
+    font-weight: 700; 
+    padding:10px 10px;	
+   }
+   .topMenuInfo ul {
+    padding:0;
+    margin: 0;
+    float: right;
+    position: fixed;
+    left: 1000px;
+      top: 0px; 	
+   }
+   .topMenuInfo .search-container {
+    float: right;
+  }
+  .topMenuInfo input[type=text] {
+    padding: 6px;
+    width: 180px;
+    margin-top: 2px;
+    font-size: 17px;
+    border: none;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+  
+  }
+  
+  .topMenuInfo .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 2px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+
+  }
+  .topMenuInfo .search-container button:hover {
+    background: #ccc;
+  }
+  
+ 
+   .topMenuInfo ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    margin-right: 1em;
+    right:0px;	
+
+   }
+   .topMenuInfo ul li a {
+     padding: 10px 30px;
+     background: #3a5185;
+     color: #fff;
+     font-weight: 700;
+     text-decoration: none;
+     margin-right: 1em;
+     display: block;
+     
+   }
+   @media screen and (max-width: 760px) {
+    .topMenuInfo ul  {
+      position: fixed;
+      left: 235px;
+      top: 0px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .topMenuInfo ul  {
+      position: fixed;
+      left: 200px;
+      top: 0px;
+    }
+  }
+   /*---navbar start--*/
+   
+   .navbar-default {
+     background:#89f248;
+     border: none;
+     border-radius:0;
+     margin:0;
+   }
+  .navbar-default img{
+    height: 100px;
+    width: 100px;
+  }
+   
+   .navbar-brand img {
+     top:0px;
+     height: 100px;
+     width: 100px;
+     position: absolute;
+     left: 5px;
+        }
+        
+  .navbar-header button{
+    background-color: rgb(199, 190, 190);
+    
+  }
+  
+   .navbar-nav {
+    padding: 11px 0; 
+   }
+   .navbar-default .navbar-nav>li>a {
+     color:black;
+     padding:10px 15px;
+     margin: 0 5px 0 0;
+     font-weight:600;
+     text-transform:uppercase;
+   }
+   .navbar-default .navbar-nav>li a.active, 
+   .navbar-default .navbar-nav>li a.active:focus, 
+   .navbar-default .navbar-nav>li a.active:hover {
+     color:white;
+     padding:10px 15px;
+     background:#3a5185;
+     transition:All 0.5s;
+     border-radius: 50%;
+   }
+   .navbar-default .navbar-nav>li>a:focus, 
+   .navbar-default .navbar-nav>li>a:hover {
+     color:white;
+     padding:10px 15px;
+     background:#3a5185;
+     border-radius:0px
+   }
+   .dropdown-menu {
+    background: #89f248; 
+    padding: 0;
+    margin: 10px 0 0 0;
+   }
+   .dropdown-menu>li>a {
+     padding: 10px 20px;
+     font-weight:600;
+     text-transform:uppercase;
+   }
+   .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+     background:#3a5185;
+     color:#fff; 
+   }
+   .navbar-default .navbar-nav>.open>a, 
+   .navbar-default .navbar-nav>.open>a:focus, 
+   .navbar-default .navbar-nav>.open>a:hover {
+     background:#3a5185;
+     color:white;
+     display: block;
+   }
+   .dropdown-menu li{
+     text-align: center;
+   }
+   .dropdown:hover .dropdown-menu {
+     display: block;
+     margin-top:0px;
+    }
+   .navbar-right .dropdown-menu {
+    right:auto;
+    left: auto; 
+   } 
+   
+
+@media(max-width:768px) {
+  .topMenuText {
+    font-size: 13px;
+   }
+   .topMenuInfo ul{
+     float: left;
+   }
+
+}  
+.navbar-header .img{
+    height: 50px;
+    width: 100px;
+    text-decoration: none;
+} 
+.search{
+    position: relative;
+    height: 50px;
+    
+}
+.search .input{
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+.btn{
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+.btn:focus,
+.input:focus{
+outline: none;
+}
+.search.active .input{
+    width: 200px;
+}
+.search.active .btn{
+    transform: translateX(198px);
+}

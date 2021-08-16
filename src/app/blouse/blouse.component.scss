@@ -1,0 +1,86 @@
+.slider-container{
+    top: 100px;
+    height: 66vh;
+    width: 100%;
+    position: relative;
+    
+    
+}
+.image-container{
+    height: 100%;
+    width: 100%;
+}
+.image-container img{
+    width: 100%;
+    height: 380px;
+}
+.mk-grid p{
+    text-align: center;
+}
+
+.image-container .text{
+    position: absolute;
+    z-index: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%; 
+    text-align: center;
+    width: 30%; 
+    font-size: 80px;
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+.row{
+    padding-left: 50px;
+    width: 100%;
+}
+.column {
+    float: left;
+    width: 32.33%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+  }
+  @media screen and (max-width: 650px) {
+    .column {
+    width:33%;
+
+    }
+      }
+      .rotate:hover {
+        transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform-origin: center;
+        -moz-transform-origin: center;
+        -webkit-transform-origin: center;
+        transition:  2s ease all;
+        -moz-transition: 2s ease all;
+        -webkit-transition:  2s ease all;
+    }
+
+.overlay .text{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 0, 221);
+}
+  .column img{
+      height: 250px;
+      
+  }
+  
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  

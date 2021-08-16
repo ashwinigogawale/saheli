@@ -1,0 +1,131 @@
+.slider-container{
+    top: 100px;
+    height: 66vh;
+    width: 100%;
+    position: relative;
+    
+    
+}
+.image-container{
+    height: 100%;
+    width: 100%;
+}
+.image-container img{
+    width: 100%;
+    height: 380px;
+}
+.mk-grid p{
+    text-align: center;
+}
+
+.image-container .text{
+    position: absolute;
+    z-index: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%; 
+    text-align: center;
+    width: 30%; 
+    font-size: 80px;
+    color: white;
+}
+h2{
+    text-align: center;
+}
+:root {
+    --clr-blue: #4361ff;
+    --clr-grey: #626262;
+    --clr-light-grey: #f9f9f9;
+    --clr-middle-grey: #d7d7d7;
+    --clr-toxic-green: #f3ff6a;
+  }
+  body {
+    background: var(--clr-blue);
+    padding: 30px;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+  @media screen and (max-width: 760px) {
+    .wrap {
+      -moz-column-count: 2;
+           column-count: 2;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .wrap {
+      -moz-column-count: 1;
+           column-count: 1;
+    }
+  }
+  .card {
+    -webkit-column-break-inside: avoid;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: all 0.2s;
+  }
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  .card:hover img {
+    transform: scale(0.9);
+  }
+  .card__picture {
+    background: var(--clr-grey);
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card__picture img {
+    position: absolute;
+    right: 20px;
+    font-size: 120px;
+    font-weight: bolder;
+    margin: 0;
+    color: var(--clr-toxic-green);
+    transition: all 0.2s;
+  }
+  .card__content {
+    font-family: "BLOKKNeue-Regular";
+    background: var(--clr-light-grey);
+    border: 1px var(--clr-middle-grey) solid;
+    padding: 0 20px 10px;
+  }
+  .card__content p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+  .card__content a.btn{
+    
+    background-color:#cfb151;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.5s;
+     }
+  .card__content a.btn:hover {
+    background-color: rgb(98, 147, 150);
+    color: #000;
+    transition: all 0.5s;
+   -moz-transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+   letter-spacing: 1px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .column-break {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,270 @@
+<div class="main">
+    <div class="slider-container">
+        <div class="image-container" id="imgs">
+            <img src="assets/get.jpg" alt="first"class="slide active"/>
+            <div class="text"> <h1>Contact Us</h1>  </div>
+        </div></div>
+        <div class="mk-grid">
+			<div class="vc_column">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="vc_empty_space" style="height: 150px"><span class="vc_empty_space_inner"></span></div>
+<h3 id="fancy-title-3" class="fancy-title">
+	<span>
+	<p>Get In Touch</p>
+			</span>
+</h3>
+<div class="clearboth"></div>
+<div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div>
+<div class="vc_column_container">
+    <div class="vc_column-inner">
+        <div class="wpb_wrapper">
+<h3 id="fancy-title-4" class="fancy-title">
+	<span>
+				<h3>Pune, Maharastra</h3>
+			</span>
+</h3>
+<div class="clearboth"></div>
+
+<div class="widget" itemscope="itemscope" itemtype="">
+
+		<ul>
+		<li><i class="fas fa-home"></i>Sawarkar chowk,Dhanakawadi,Pune,Maharastra, India.</li>
+		<li><i class="fas fa-phone"></i><a itemprop="telephone" href="tel:9311357353">9311357353</a></li>
+	<li><i class="fas fa-envelope"></i><span><a itemprop="email" href="mailto:kad@yahoo.com">kad@yahoo.com</a></span></li>
+			</ul>
+</div>
+
+<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div>			</div>
+<!-- map -->
+<div class="container">
+
+  <h1> Google Maps </h1>
+
+  <div class="form-group">
+    <label>Enter address</label>
+    <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+
+
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+  </agm-map>
+
+
+
+</div>
+
+<div class="contact">
+<h2>Contact Us</h2>
+<h4>We’re here to help and answer any questions you might have.</h4>
+
+<div class="container">
+  <form  [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-25">
+        <label for="firstname">First Name<span class="required-field">*</span></label>
+      </div>
+      <div class="col-75">
+        <input type="text"  id="fname" name="firstname" placeholder="Your name.." required minlength="2" required maxlength="15" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div  class="alert" *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div  class="alert" *ngIf="f.firstName.errors?.minlength">First Name must be at least 2 characters long.</div>
+      </div>
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name<span class="required-field">*</span></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required minlength="2" required maxlength="15"  formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div  class="alert" *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+          <div  class="alert" *ngIf="f.lastName.errors?.minlength">Last Name must be at least 2 characters long.</div>
+      </div>
+
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Mobile No<span class="required-field">*</span></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="no" name="no" placeholder="Your mobile no.." required maxlength="10" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+        <div  *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+            <div  class="alert" *ngIf="f.mobile.errors.required">Mobile number is required</div>
+            <div class="alert" *ngIf="f.mobile.errors.pattern">Mobile Number not valid.</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="country">Email<span class="required-field">*</span></label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your email id.." formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div  class="alert" *ngIf="f.email.errors.required">Email is required</div>
+              <div  class="alert" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject"> Your Message</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="subject" name="subject" placeholder="Write something.." style="height:200px" formControlName="msg" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.msg.errors }" />
+        <div *ngIf="submitted && f.msg.errors" class="invalid-feedback">
+            <div class="alert"  *ngIf="f.msg.errors.required">Message is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <input type="submit" value="Submit" class="btn">
+
+    </div>
+  </form>
+</div>
+</div>
+
+<h1>Frequntly asked question</h1>
+<div class="faq-container">
+
+<div class="faq ">
+    <h3 class="faq-title">
+      Q1.Do you help with designing the outfit?
+    </h3>
+    <p class="faq-text">
+      Yes. When you place a stitching order with us, we pair you up with one of our personal design consultants who will help design a look for your outfit. While you’re making this choice, she will also help you understand what kind of designs might suit your body type.
+    </p>
+    <button class="faq-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+    </button></div>
+    <div class="faq ">
+        <h3 class="faq-title">
+        Q2.I have a design reference. Can you make me something that looks like it?
+        </h3>
+        <p class="faq-text">
+          If you have inspiration from Pinterest, friends’ outfits, etc, we can use it as a starting point.
+        </p>
+        <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+        </button></div>
+        <div class="faq">
+            <h3 class="faq-title">
+             Q3.What are your charges?
+            </h3>
+            <p class="faq-text">
+              You can check our pricing here
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button></div>
+            <div class="faq">
+                <h3 class="faq-title">
+                 Q4.If my order has alterations, will you charge extra?
+                </h3>
+                <p class="faq-text">
+                  No, we do not. We try to get your measurements as accurately as possible, to avoid alterations. But in case your dress doesn’t fit, the cost of alteration is on us!
+                </p>
+                <button class="faq-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-times"></i>
+                </button></div>
+                <div class="faq ">
+                    <h3 class="faq-title">
+                      Q5.Can I add pockets to any type of clothing?
+                    </h3>
+                    <p class="faq-text">
+                      Yes, almost. We can add pockets to 90% of your clothes including dresses, kurtas, trousers, skirts etc. There are some cases where we cannot or it's not advisable. For example, we cannot add pockets to clothes that are very tight fitted or have no side seams.
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <div class="faq ">
+                      <h3 class="faq-title">
+                        Q6.When do I make the payment?
+                      </h3>
+                      <p class="faq-text">
+                        For stitching orders, you need to pay before delivery. However, you can rest assured that any alterations after delivery will be handled free of cost. If you’re procuring the fabric from us too, you need to pay for the fabric before we start making your garment.
+                      </p>
+                      <button class="faq-toggle">
+                          <i class="fas fa-chevron-down"></i>
+                          <i class="fas fa-times"></i>
+                      </button>
+</div>
+<div class="faq ">
+  <h3 class="faq-title">
+   Q7.How should I submit the measurements?
+  </h3>
+  <p class="faq-text">
+    You just need to send us one perfectly-fitting garment along with your dress material. We will use that as a reference for measurements. Additionally, you can mention specifics that need to be customised to our design team..
+  </p>
+  <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+  </button>
+</div>
+<div class="faq ">
+  <h3 class="faq-title">
+   Q8. Do you charge for pick-up and delivery?
+  </h3>
+  <p class="faq-text">
+    Great news, pick-up and delivery service are free of charge!
+  </p>
+  <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+  </button>
+</div>
+<div class="faq ">
+  <h3 class="faq-title">
+   Q9. Will my fabric and dress material be safe during this process?
+  </h3>
+  <p class="faq-text">
+    You can pack the dress material and measurement garment in a secure way, before handing it over to our pick-up service. Else you can request for a packaging kit from us, which will be available at an additional cost. We will ensure your fabric and garment is taken care of, and handed back in good condition.
+
+
+  </p>
+  <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+  </button>
+</div>
+<div class="faq ">
+  <h3 class="faq-title">
+   Q10.Is Service Tax Applicable?
+  </h3>
+  <p class="faq-text">
+    Yes, service tax will be applied to your order in keeping with the Government rules and regulations.
+
+  </p>
+  <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+  </button>
+</div>
+
+<div class="clearfix"></div>
+
+    </div>
+
+

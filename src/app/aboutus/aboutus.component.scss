@@ -1,0 +1,161 @@
+.slider-container{
+    top: 100px;
+    height:66vh;
+    width: 100%;
+    position: relative;
+    
+    
+}
+.image-container{
+    height: 100%;
+    width: 100%;
+}
+.image-container img{
+    width: 100%;
+    height: 390px;
+}
+.mk-grid p{
+    text-align: center;
+    font-size: 35px;
+}
+.mk-grid h3{
+    text-align: center;
+    font-size: 25px;
+}
+.image-container .text{
+    position: absolute;
+    z-index: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%; 
+    text-align: center;
+    width: 30%; 
+    font-size: 80px;
+    color: white;
+    
+}
+.info h4{
+    text-align: center;
+    font-size: 35px;
+}
+
+
+  .clearfix {
+      background-color:white;
+      font-size: 20px;
+    overflow: auto;
+    padding: 5px;
+    padding-left: 150px;
+
+  }
+  .clearfix h1{
+      padding-top: 100px;
+  }
+  .clearfix h4{
+      padding-top: 0px;
+      font-size: 20px;
+  }
+  .clearfix .img2 {
+    float: right;
+    height: 400px;
+    padding-right: 50px;
+    width: 400;
+       height:400;
+       -moz-border-radius: 50%;
+       -webkit-border-radius: 50%;
+       border-radius: 50%;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      padding:4px;
+      border:1px solid #000 !important;
+  }
+  
+  
+  .part2 {
+    position: relative;
+    width: 100%;
+    max-width:auto;
+    padding: 40px 40px;
+    padding-left: 30px;
+  }
+  
+  .part2 img {
+    width: 100%;
+    height: 300px;
+  }
+  .part2 .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 10%; 
+    text-align: left;
+    width: 50%; 
+    color: #fff;
+  }
+  .text h2{
+    text-align: center;
+    top:30px;
+}
+.fa-quote{
+  color: rgba(255,255,255,0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+  }
+  .fa-quote-right{
+      left:-50px;
+      color: #fff;
+      font-size: 30px;
+  }
+  .fa-quote-left{
+      right: -50px;
+      color: #fff;
+      font-size: 30px;
+  }
+  .testimonial {
+      line-height: 28px;
+      text-align: justify;
+      font-size: 20px;
+      
+  }
+  
+  
+  .testimonial .user-details {
+      margin-right: 10px;
+      text-align: right;
+
+  }
+  .user-details .username {
+      margin: 0;
+      text-align: end;
+  }
+  .user-details .role{
+      font-weight: normal;
+      margin: 10px 0;
+      text-align: end;
+  }
+  .progress-bar {
+      background-color: #fff;
+      height: 4px;
+      width: 100%;
+      animation: grow 10s linear infinite;
+      transform-origin: left;
+  }
+  @keyframes grow{
+      0%{
+          transform: scaleX(0);
+      }
+  }
+  @media (max-width:768px) {
+      .part2 {
+          padding: 10px 10px;
+      }
+      .fa-quote{
+          display: none;
+      }
+  }
+

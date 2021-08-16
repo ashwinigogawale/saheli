@@ -1,0 +1,168 @@
+<div class="main">
+    <div class="slider-container">
+        <div class="image-container" id="imgs">
+            <img src="assets/bc.jpg" alt="first"class="slide active"/>
+            <div class="text"> <h1>Book An Appoinment</h1>  </div>
+        </div></div>
+        <div class="register">
+            <h2>Register Your's</h2>
+            
+            
+            <div class="container">
+              <form [formGroup]="bookappoForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-25">
+                    <label for="fname">First Name<span class="required-field">*</span></label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.."required minlength="2" required maxlength="15" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div  class="alert" *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div>
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                      <div  class="alert" *ngIf="f.firstName.errors?.minlength">First Name must be at least 2 characters long.</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="row">
+                  
+                    <div class="col-25">
+                    <label for="lname">Last Name<span class="required-field">*</span></label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.."required minlength="2" required maxlength="15"  formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div  class="alert" *ngIf="f.lastName.errors.required">Last Name is required</div>
+                    </div>
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                      <div  class="alert" *ngIf="f.lastName.errors?.minlength">Last Name must be at least 2 characters long.</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="country">Mobile No<span class="required-field">*</span></label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="no" name="no" placeholder="Your mobile no.."required maxlength="10" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                    <div  *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                        <div  class="alert" *ngIf="f.mobile.errors.required">Mobile number is required</div>
+                        <div class="alert" *ngIf="f.mobile.errors.pattern">Mobile Number not valid.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                      <label for="country">Email<span class="required-field">*</span></label>
+                    </div>
+                    <div class="col-75">
+                      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your email id.." formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div  class="alert" *ngIf="f.email.errors.required">Email is required</div>
+                          <div  class="alert" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                          
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">  
+                    <label>Select Type<span class="required-field">*</span></label></div>
+                    <div class="col-75">
+                    <span class="gender">
+                        <select name="gender" class="option" aria-required="true" aria-invalid="false" formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type.errors }">
+                            <option value="">---</option><option value="Men">blouses</option>
+                            <option value="Women">Women</option><option value="Kids">Kids</option>
+                            <option value="Others">Others</option></select></span>
+                            <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+                              <div  class="alert" *ngIf="f.type.errors.required"> Type is required</div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                        <label>Select Service<span class="required-field">*</span></label></div>
+                        <div class="col-75">
+                        <span class=" service">
+                            <select name="service" class="Service_selection" aria-required="true" aria-invalid="false" formControlName="service" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.service.errors }"><option value="">---</option>
+                                <option value="Custom Tailoring For blouses">Custom Tailoring For Blouses</option><option value="Custom Tailoring For Women">Custom Tailoring For Women</option><option value="Custom Tailoring For Kids">Custom Tailoring For Kids</option><option value="Custom Tailoring For saree">Custom Tailoring For saree</option><option value="Alteration &amp; Repair">Alteration &amp; Repair</option></select></span>
+                                <div *ngIf="submitted && f.service.errors" class="invalid-feedback">
+                                  <div  class="alert" *ngIf="f.service.errors.required"> Service is required</div>
+                                </div>
+                      </div>
+                      </div>
+                        <div class="row">
+                            <div class="col-25">
+                            <label>Appointment Date<span class="required-field">*</span></label></div>
+                            <div class="col-75">
+                            <span class="date">
+                              <input type="date" name="apt_date" value="" class="validates-as-required" aria-required="true" aria-invalid="false" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }"></span>
+                              <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                <div  class="alert" *ngIf="f.date.errors.required"> Date is required</div>
+                            </div>
+                            </div></div>
+                            <div class="row">
+                                <div class="col-25">
+                                <label>Select Time<span class="required-field">*</span></label></div>
+                                <div class="col-75">
+                                <span class="time"><select name="apt_time" class="validates-as-required" aria-required="true" aria-invalid="false" formControlName="time" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.time.errors }">
+                                  <option value="">---</option><option value="9:00AM - 10:00AM">9:00AM - 10:00AM</option><option value="10:00AM - 11:00AM">10:00AM - 11:00AM</option><option value="11:00AM - 12:00PM">11:00AM - 12:00PM</option><option value="12:00PM - 1:00PM">12:00PM - 1:00PM</option><option value="1:00PM - 2:00PM">1:00PM - 2:00PM</option><option value="2:00PM - 3:00PM">2:00PM - 3:00PM</option><option value="3:00PM - 4:00PM">3:00PM - 4:00PM</option><option value="4:00PM - 5:00PM">4:00PM - 5:00PM</option><option value="5:00PM - 6:00PM">5:00PM - 6:00PM</option><option value="6:00PM - 7:00PM">6:00PM - 7:00PM</option></select></span>
+                                  <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                                    <div  class="alert" *ngIf="f.time.errors.required"> Time is required</div>
+                                </div>
+                                </div></div>
+                                <div class="row">
+                                    <div class="col-25">
+                                    <label>Address<span class="required-field">*</span></label></div>
+                                    <div class="col-75">
+                                    <span class="address">
+                                      <input type="text" name="address" value="" size="40" class="validates-as-required" aria-required="true" aria-invalid="false" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }"></span>
+                                      <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                        <div  class="alert" *ngIf="f.address.errors.required"> Address is required</div>
+                                    </div>
+                                    </div></div>
+                                    <div class="row">
+                                        <div class="col-25"> 
+                                        <label>State<span class="required-field">*</span></label></div>
+                                        <div class="col-75">
+                                        <span class="state">
+                                          <input type="text" name="state" value="" size="40" class="validates-as-required" aria-required="true" aria-invalid="false" formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.state.errors }"></span>
+                                          <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                                            <div  class="alert" *ngIf="f.state.errors.required"> State is required</div>
+                                        </div>
+                                        </div></div>
+                                        <div class="row">
+                                            <div class="col-25">
+                                            <label>City<span class="required-field">*</span></label></div>
+                                            <div class="col-75">
+                                            <span class="city">
+                                              <input type="text" name="city" value="" size="40" class="validates-as-required" aria-required="true" aria-invalid="false" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }"></span>
+                                              <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                                <div  class="alert" *ngIf="f.city.errors.required"> City is required</div>
+                                            </div>
+                                            </div></div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="subject"> Your Message</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="subject" name="subject" placeholder="Write something.." style="height:200px" formControlName="msg" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.msg.errors }" />
+                    <div *ngIf="submitted && f.msg.errors" class="invalid-feedback">
+                        <div class="alert"  *ngIf="f.msg.errors.required">Message is required</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    
+                  <input type="submit" value="Submit" class="btn">
+                
+                </div>
+              </form>
+            </div>
+            </div>
+      
+        </div>
+        
+        
+       
+    
+    
